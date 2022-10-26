@@ -53,7 +53,9 @@ createApp ({
 
             currentImage: 0,
 
-            slideTime: 3000
+            slideTime: 3000,
+
+            intervalProcess: 0
 
         }
     },
@@ -83,9 +85,27 @@ createApp ({
 
             this.currentImage = index;
 
+        },
+
+        automaticSlide: function() { 
+            
+            this.intervalProcess = setInterval(this.displayImageRight, this.slideTime)
+
+        },
+
+        stopSlide: function() {
+
+            clearInterval(this.intervalProcess);
+
         }
 
         
+
+    },
+
+    created() {
+
+        this.automaticSlide();
 
     }
 
