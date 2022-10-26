@@ -1,0 +1,24 @@
+
+/*------VARIABLES------*/
+:root {
+
+    --bg-color-primo: blue;
+    --bg-color-secondo: red;
+
+    
+}
+
+/*------COMMON PARTS------*/
+
+/*------SPECIFIED PARTS BY ID------*/
+.red {
+
+    color: var(--bg-color-secondo);
+
+}
+
+.blue {
+
+    color: var(--bg-color-primo);
+
+}
